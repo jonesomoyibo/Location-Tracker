@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "478080300970",
+    "firebase_url": "https://location-tracker-9b8da-default-rtdb.firebaseio.com",
+    "project_id": "location-tracker-9b8da",
+    "storage_bucket": "location-tracker-9b8da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478080300970:android:75a02cd1caaee36d11ddd3",
+        "android_client_info": {
+          "package_name": "com.decagon.android.sq007"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478080300970-apa4t6dm22qsoqd6vud9ee6g1moqr3q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6TnFaP7b6anv5cuF1tq195Obj3pySX5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478080300970-apa4t6dm22qsoqd6vud9ee6g1moqr3q4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
