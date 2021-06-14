@@ -79,9 +79,12 @@ class RemoteServices(val appContext:Context): ViewModel(){
     }
 
 
-    @SuppressLint("MissingPermission")
+
      fun readLocationChanges() {
-        fusedLocationClient.requestLocationUpdates(
+         if (ActivityCompat.checkSelfPermission(appContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(appContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+             return
+         }
+         fusedLocationClient.requestLocationUpdates(
                 locationRequest,
                 locationCallback,
                 null
@@ -141,10 +144,13 @@ class RemoteServices(val appContext:Context): ViewModel(){
     }
 
 
-        @SuppressLint("MissingPermission")
+
          fun onMapReady(googleMap: GoogleMap) {
             mMap = googleMap
-            mMap.isMyLocationEnabled = true
+             if (ActivityCompat.checkSelfPermission(appContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(appContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                 return
+             }
+             mMap.isMyLocationEnabled = true
             mMap.uiSettings.isMyLocationButtonEnabled = true
 
         }

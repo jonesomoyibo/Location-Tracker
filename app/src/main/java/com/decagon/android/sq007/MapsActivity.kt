@@ -32,7 +32,7 @@ class MapsActivity : AppCompatActivity(),OnMapReadyCallback,
         remoteServices.initializeFirebase(LocationServices.getFusedLocationProviderClient(this))
         accessLocationServices()
 
-        //lifecycle.addObserver(remoteServices)
+
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -45,7 +45,6 @@ class MapsActivity : AppCompatActivity(),OnMapReadyCallback,
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
         ) {
-//            mMap.isMyLocationEnabled = true
               remoteServices.getLocationUpdates()
               remoteServices.readLocationChanges()
         } else {
@@ -69,7 +68,7 @@ class MapsActivity : AppCompatActivity(),OnMapReadyCallback,
         }
     }
 
-    @SuppressLint("MissingPermission")
+
     override fun onMapReady(googleMap: GoogleMap) {
         remoteServices.onMapReady(googleMap)
     }
